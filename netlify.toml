@@ -1,0 +1,6 @@
+# Static site: two hand-written HTML files at the repo root, no build step.
+# Declared explicitly so linking this repo to the Netlify project cannot guess
+# wrong about the publish directory.
+[build]
+  publish = "."
+  command = ""
