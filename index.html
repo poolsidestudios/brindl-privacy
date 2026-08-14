@@ -4,21 +4,136 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Brindl — Privacy Policy</title>
+<meta name="description" content="Privacy policy for Brindl, a dog daycare and boarding manager for iPhone and iPad.">
+<meta name="theme-color" content="#1B5266">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-         line-height: 1.6; color: #1c1c1e; max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
-  h1 { font-size: 28px; margin-bottom: 4px; }
-  h2 { font-size: 19px; margin-top: 32px; }
-  .meta { color: #6e6e73; font-size: 14px; margin-bottom: 24px; }
-  ul { padding-left: 20px; }
-  a { color: #0a84ff; }
-  .note { background: #f2f2f7; border-radius: 10px; padding: 14px 16px; font-size: 14px; color: #3a3a3c; }
+  /* Brindl palette, taken from AppPalette.swift's day theme. */
+  :root {
+    --petrol:       #1B5266;   /* Today tab      */
+    --petrol-deep:  #143D4D;   /* Calendar tab   */
+    --petrol-mid:   #3D7A8E;   /* Dogs tab       */
+    --teal:         #5DD6E8;   /* daycare accent */
+    --amber:        #D79A55;   /* the icon's odd toe out */
+    --cream:        #F6F4EF;
+    --card:         #FFFFFF;
+    --ink:          #1D2A2E;
+    --muted:        #5C6B70;
+    --rule:         #E2DED6;
+    --link:         #1B5266;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --cream:  #12191C;
+      --card:   #1B2429;
+      --ink:    #E7E3DB;
+      --muted:  #9FAEB3;
+      --rule:   #2C383D;
+      --link:   #7FDDEC;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.62;
+    color: var(--ink);
+    background: var(--cream);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* ---- masthead ---- */
+  .masthead {
+    background:
+      radial-gradient(120% 140% at 15% -10%, rgba(93,214,232,0.28), transparent 60%),
+      linear-gradient(160deg, var(--petrol) 0%, var(--petrol-deep) 100%);
+    color: #fff;
+    padding: 40px 20px 34px;
+  }
+  .masthead-inner { max-width: 720px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 16px; }
+  .brand img {
+    width: 76px; height: 76px; display: block;
+    filter: drop-shadow(0 6px 16px rgba(0,0,0,0.35));
+  }
+  .wordmark {
+    margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.02em; color: #fff;
+  }
+  .tagline { margin: 2px 0 0; font-size: 14.5px; color: rgba(255,255,255,0.78); }
+  .pill {
+    display: inline-block; margin: 26px 0 0;
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 999px; padding: 5px 14px;
+    font-size: 12.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  }
+  .masthead h1 { margin: 14px 0 2px; font-size: 32px; letter-spacing: -0.02em; }
+  .masthead .meta { margin: 0; font-size: 14px; color: rgba(255,255,255,0.72); }
+
+  /* ---- content ---- */
+  main { max-width: 720px; margin: 0 auto; padding: 8px 20px 56px; }
+  h2 {
+    font-size: 19px; margin: 36px 0 10px; padding-left: 12px;
+    border-left: 4px solid var(--teal); line-height: 1.3;
+  }
+  p, ul { margin: 0 0 14px; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 7px; }
+  a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  strong { font-weight: 650; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin: 22px 0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  }
+  .card p:last-child, .card ul:last-child { margin-bottom: 0; }
+  .note { font-size: 14px; color: var(--muted); }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 26px 20px 48px;
+  }
+  .footer-inner {
+    max-width: 720px; margin: 0 auto;
+    display: flex; flex-wrap: wrap; gap: 8px 20px;
+    align-items: center; justify-content: space-between;
+    font-size: 14px; color: var(--muted);
+  }
+  .footer-inner .dot { color: var(--amber); }
+
+  @media (max-width: 480px) {
+    .masthead { padding: 30px 18px 26px; }
+    .brand img { width: 62px; height: 62px; }
+    .wordmark { font-size: 25px; }
+    .masthead h1 { font-size: 26px; }
+  }
 </style>
 </head>
 <body>
 
-<h1>Brindl — Privacy Policy</h1>
-<p class="meta">Last updated: July 1, 2026</p>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="brand">
+      <img src="brindl-icon-256.png" alt="Brindl app icon" width="76" height="76">
+      <div>
+        <p class="wordmark">Brindl</p>
+        <p class="tagline">Dog daycare &amp; boarding manager</p>
+      </div>
+    </div>
+    <span class="pill">Privacy</span>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Last updated: July 1, 2026</p>
+  </div>
+</header>
+
+<main>
 
 <p>Brindl ("Brindl," "we," "us") is a scheduling, day-board, and billing app for a dog
 daycare and boarding business. This policy explains what information the app handles, how it
@@ -31,6 +146,7 @@ for its own team members. The app also stores information about the business's c
 owners) and their dogs, which the business enters and is responsible for.</p>
 
 <h2>Information we handle</h2>
+<div class="card">
 <ul>
   <li><strong>Account information</strong> — the name, email address, and password you use to
       sign in. Passwords are handled through Google Firebase Authentication and are not visible to us.</li>
@@ -42,6 +158,7 @@ owners) and their dogs, which the business enters and is responsible for.</p>
       such as device type, app version, IP address, and basic usage or crash data to keep the
       service running reliably.</li>
 </ul>
+</div>
 
 <h2>How we use information</h2>
 <ul>
@@ -86,13 +203,24 @@ connections. No system is perfectly secure, but we take reasonable steps to prot
 version.</p>
 
 <h2>Contact</h2>
-<p><strong>Poolside Studios</strong><br>
-<a href="mailto:poolsidestudios@mac.com">poolsidestudios@mac.com</a><br>
-<a href="./support.html">Brindl Support</a></p>
+<div class="card">
+  <p><strong>Poolside Studios</strong><br>
+  <a href="mailto:poolsidestudios@mac.com">poolsidestudios@mac.com</a><br>
+  <a href="./support.html">Brindl Support</a></p>
+</div>
 
 <p class="note">This policy is a general template tailored to how Brindl works. Depending on where
 your clients live, additional disclosures may apply — consider having it reviewed for your
 jurisdiction.</p>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>Brindl <span class="dot">&bull;</span> Poolside Studios</span>
+    <span><a href="./support.html">Support</a> &nbsp;&middot;&nbsp; <a href="./index.html">Privacy</a></span>
+  </div>
+</footer>
 
 </body>
 </html>

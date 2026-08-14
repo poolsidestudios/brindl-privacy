@@ -2,7 +2,26 @@
 
 The two public pages Brindl needs for the App Store: a privacy policy and a
 support page. Hand-written static HTML with inline styles - no build step, no
-dependencies.
+dependencies. They share a masthead, the app icon, and the day-theme palette
+lifted from `AppPalette.swift` in the app repo (Petrol Blue `#1B5266`, Deep
+Petrol `#143D4D`, Bright Teal `#5DD6E8`), plus a dark variant via
+`prefers-color-scheme`.
+
+## Icon assets
+
+Generated from `Brindl/Assets.xcassets/AppIcon.appiconset/appicon_light.png` in
+the app repo, so the site icon and the App Store icon cannot drift:
+
+| File | Use | Notes |
+|---|---|---|
+| `favicon-32.png` | browser tab | rounded corners, transparent outside |
+| `favicon-192.png` | high-DPI tab, Android | same treatment |
+| `apple-touch-icon.png` | iOS home screen | 180px, SQUARE on purpose - iOS applies its own mask, so pre-rounding double-rounds it |
+| `brindl-icon-256.png` | masthead on both pages | rounded corners |
+
+To regenerate after an app-icon change: resize with Lanczos, then apply a
+rounded-rect alpha mask at ~22% radius, building the mask at 4x and downscaling
+it or the corners alias.
 
 ## Where they are served
 
