@@ -1,6 +1,6 @@
 # Static site: two hand-written HTML files at the repo root, no build step.
-# Declared explicitly so linking this repo to the Netlify project cannot guess
-# wrong about the publish directory.
+# `publish` is declared explicitly so linking this repo to the Netlify project
+# cannot guess wrong about the publish directory. No `command` key at all -
+# omitting it means "no build", which is unambiguous where an empty string is not.
 [build]
   publish = "."
-  command = ""
